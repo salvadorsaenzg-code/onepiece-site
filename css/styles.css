@@ -1,13 +1,13 @@
-  :root{
-    --ink:#0e1f2e;
-    --deep:#0a1620;
-    --parchment:#ece2c8;
-    --parchment-dim:#ddd0ac;
-    --gold:#c99a3f;
-    --gold-bright:#e3b95e;
-    --crimson:#8c3a3a;
-    --teal:#3d6b64;
-    --line: rgba(236,226,200,0.16);
+ :root{
+    --ink:#0c2830;
+    --deep:#071c22;
+    --parchment:#bcdedb;
+    --parchment-dim:#8fb9b5;
+    --gold:#4fb3a9;
+    --gold-bright:#8fd9cf;
+    --crimson:#c9793f;
+    --teal:#3d7ea6;
+    --line: rgba(188,222,219,0.16);
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
@@ -37,8 +37,8 @@
     content:"";
     position:fixed; inset:0;
     background:
-      radial-gradient(circle at 15% 10%, rgba(201,154,63,0.05), transparent 40%),
-      radial-gradient(circle at 85% 90%, rgba(61,107,100,0.06), transparent 45%);
+      radial-gradient(circle at 15% 10%, rgba(79,179,169,0.05), transparent 40%),
+      radial-gradient(circle at 85% 90%, rgba(61,126,166,0.06), transparent 45%);
     pointer-events:none;
     z-index:0;
   }
@@ -118,7 +118,7 @@
   /* ARCOS - logbook list */
   .arc-entry{
     display:grid;
-    grid-template-columns: 64px 1fr auto;
+    grid-template-columns: 64px 1fr;
     gap:1.2rem;
     align-items:start;
     padding:1.4rem 0;
@@ -130,18 +130,20 @@
     color:var(--gold);
     opacity:.7;
   }
-  .arc-entry h3{ font-size:1.25rem; margin-bottom:.25rem; }
+  .arc-entry h3{ font-size:1.25rem; margin-bottom:.4rem; }
   .arc-saga{ font-size:.82rem; color:var(--teal); font-family:'Inter',sans-serif; }
-  .arc-body{ color:var(--parchment-dim); margin-top:.5rem; font-size:.96rem; }
-  .rating{
-    text-align:right;
-    font-family:'Spectral',serif;
+  .arc-body{ color:var(--parchment-dim); margin-top:.6rem; font-size:.96rem; }
+  .arc-chars{ display:flex; flex-wrap:wrap; gap:.4rem; }
+  .char-chip{
+    display:inline-block;
+    font-size:.75rem;
+    color:var(--parchment);
+    background:rgba(236,226,200,0.08);
+    border:1px solid var(--line);
+    padding:.15rem .55rem;
+    border-radius:20px;
+    font-family:'Inter',sans-serif;
   }
-  .rating .score{
-    font-size:1.6rem;
-    color:var(--gold-bright);
-  }
-  .rating .of10{ font-size:.85rem; color:var(--parchment-dim); }
 
   /* PERSONAJES - cards */
   .grid-cards{

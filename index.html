@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bitácora del Grand Line</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600;700&family=Spectral+SC:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="hero" id="splash">
+  <div class="eyebrow-log">Cuaderno de bitácora — anotaciones de un lector que sigue el rastro del One Piece</div>
+  <h1 class="display">Bitácora del<br>Grand Line</h1>
+  <p class="sub">Arcos, tripulantes, teorías sin resolver y los duelos que todo fan discute alguna vez. Todo con opinión propia, nada de relleno.</p>
+  <button id="start-btn" class="start-btn">Empezar</button>
+  <div class="wave"></div>
+</header>
+
+<nav class="tabs" id="tabs">
+  <button data-view="arcos" class="active">Arcos</button>
+  <button data-view="personajes">Personajes</button>
+  <button data-view="teorias">Teorías</button>
+  <button data-view="duelos">1 vs 1</button>
+  <button data-view="encuestas">Encuestas</button>
+</nav>
+
+<main id="main">
+
+  <!-- ARCOS -->
+  <section class="view active" id="arcos">
+    <div class="intro">
+      <h2>Arcos canon en orden cronológico</h2>
+      <p>Todos los arcos canon del manga, en el orden en que ocurren, sin filler. Cada uno con su rango de capítulos, personajes principales y una sinopsis breve.</p>
+    </div>
+    <div id="arcos-list"></div>
+  </section>
+
+  <!-- PERSONAJES -->
+  <section class="view" id="personajes">
+    <div class="intro">
+      <h2>Guía de tripulantes (y algún otro)</h2>
+      <p>Fichas rápidas de los personajes que más me interesan, con su fruta del diablo cuando aplica y por qué se ganaron un lugar en esta lista.</p>
+    </div>
+    <div class="grid-cards" id="personajes-list"></div>
+  </section>
+
+  <!-- TEORIAS -->
+  <section class="view" id="teorias">
+    <div class="intro">
+      <h2>Teorías y misterios sin resolver</h2>
+      <p>Lo que la comunidad lleva años discutiendo, con mi propio nivel de "qué tan probable creo que es esto".</p>
+    </div>
+    <div id="teorias-list"></div>
+  </section>
+
+  <!-- 1 VS 1 -->
+  <section class="view" id="duelos">
+    <div class="intro">
+      <h2>Enfrentamientos 1 vs 1</h2>
+      <p>Porcentajes fijos, calculados a mano según hazañas mostradas en el manga (no encuestas en vivo). Cada uno con su justificación.</p>
+    </div>
+    <div id="duelos-list"></div>
+  </section>
+
+  <!-- ENCUESTAS -->
+  <section class="view" id="encuestas">
+    <div class="intro">
+      <h2>Encuestas de favoritos</h2>
+      <p>Resultados fijos que armé como punto de partida — pensados para reemplazarse el día que quieras conectar votos reales.</p>
+    </div>
+    <div id="encuestas-list"></div>
+  </section>
+
+</main>
+
+<footer>
+  Bitácora de fan hecha con cariño · última actualización de contenido: edítala a tu gusto
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

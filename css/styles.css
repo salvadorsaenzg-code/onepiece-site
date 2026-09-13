@@ -1,4 +1,4 @@
- :root{
+  :root{
     --ink:#0c2830;
     --deep:#071c22;
     --parchment:#bcdedb;
@@ -163,6 +163,12 @@
     position:absolute; top:0; left:0; width:100%; height:3px;
     background:var(--gold);
     opacity:.6;
+  }
+  .char-emblem{
+    width:64px; height:64px;
+    border-radius:8px;
+    display:flex; align-items:center; justify-content:center;
+    margin-bottom:.8rem;
   }
   .char-card h3{ font-size:1.2rem; }
   .char-tag{

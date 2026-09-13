@@ -15,7 +15,7 @@
     margin:0;
     background:
       linear-gradient(180deg, rgba(7,28,34,0.88), rgba(7,28,34,0.94) 40%, var(--deep) 85%),
-      url('images/ocean-bg.jpg') center 20%/cover no-repeat fixed;
+      url('../images/ocean-bg.jpg') center 20%/cover no-repeat fixed;
     color:var(--parchment);
     font-family:'Inter',sans-serif;
     font-size:16px;

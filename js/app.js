@@ -18,19 +18,48 @@ function renderArcos(){
     <div class="arc-entry">
       <div class="arc-num">${a.n}</div>
       <div>
-        <div class="arc-saga">${a.saga}</div>
+        <div class="arc-saga">${a.saga} · caps. ${a.capitulos}</div>
         <h3>${a.nombre}</h3>
-        <div class="arc-body">${a.texto}</div>
+        <div class="arc-chars">${a.personajes.map(p=>`<span class="char-chip">${p}</span>`).join('')}</div>
+        <div class="arc-body">${a.sinopsis}</div>
       </div>
-      <div class="rating"><span class="score">${a.nota.toFixed(1)}</span><span class="of10">/10</span></div>
     </div>
   `).join('');
+}
+
+// Emblemas: iconografía propia (no retratos) — color de firma + objetos
+// característicos de cada personaje, dibujados en SVG.
+function emblemIcon(type){
+  const s = 'stroke="currentColor" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"';
+  switch(type){
+    case 'hat': // sombrero de paja
+      return `<ellipse cx="24" cy="30" rx="16" ry="4" ${s}/><path d="M12 29 Q13 15 24 15 Q35 15 36 29" ${s}/><path d="M13 25 H35" ${s}/>`;
+    case 'swords3': // tres espadas cruzadas + un arete
+      return `<path d="M10 12 L34 36 M14 8 L14 16 M34 32 L34 40" ${s}/><path d="M38 12 L14 36 M42 8 L42 16 M14 32 L14 40" ${s}/><path d="M24 6 V42" ${s}/><circle cx="9" cy="9" r="2.5" ${s}/>`;
+    case 'swirl': // clima-tact / remolino
+      return `<path d="M24 8 C33 8 38 15 38 22 C38 30 31 34 25 32 C20 30 19 24 23 22 C26 20 29 23 27 26" ${s}/><circle cx="15" cy="33" r="3" ${s}/>`;
+    case 'flower': // flor arqueológica
+      return `<circle cx="24" cy="24" r="4" ${s}/><path d="M24 20 C22 12 18 10 24 6 C30 10 26 12 24 20 M28 24 C36 22 38 18 42 24 C38 30 36 26 28 24 M24 28 C26 36 30 38 24 42 C18 38 22 36 24 28 M20 24 C12 26 10 30 6 24 C10 18 12 22 20 24" ${s}/>`;
+    case 'antler': // cornamenta
+      return `<path d="M20 40 V22 C20 22 14 20 13 12 M20 30 C20 30 14 29 12 24 M28 40 V22 C28 22 34 20 35 12 M28 30 C28 30 34 29 36 24" ${s}/>`;
+    case 'heart': // corazón / marca de "Corazón"
+      return `<path d="M24 38 C10 28 8 18 16 13 C21 10 24 15 24 15 C24 15 27 10 32 13 C40 18 38 28 24 38 Z" ${s}/>`;
+    case 'crown': // corona
+      return `<path d="M9 34 L12 15 L20 25 L24 12 L28 25 L36 15 L39 34 Z" ${s}/><path d="M9 34 H39" ${s}/>`;
+    case 'sword1': // espada única, capitán yonko
+      return `<path d="M24 6 V32" ${s}/><path d="M15 15 H33" ${s}/><path d="M20 32 H28 L26 40 H22 Z" ${s}/>`;
+    default:
+      return `<circle cx="24" cy="24" r="14" ${s}/>`;
+  }
 }
 
 function renderPersonajes(){
   const el = document.getElementById('personajes-list');
   el.innerHTML = personajes.map(p=>`
     <div class="char-card">
+      <div class="char-emblem" style="background:${p.color}22; color:${p.color}">
+        <svg viewBox="0 0 48 48" width="40" height="40">${emblemIcon(p.icon)}</svg>
+      </div>
       <span class="char-tag">${p.tag}</span>
       <h3>${p.nombre}</h3>
       <p><strong>Fruta:</strong> ${p.fruta}</p>

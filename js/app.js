@@ -1,3 +1,13 @@
+// ---------- SPLASH / PANTALLA DE INICIO ----------
+document.body.classList.add('pre-start');
+const startBtn = document.getElementById('start-btn');
+if(startBtn){
+  startBtn.addEventListener('click', ()=>{
+    document.body.classList.remove('pre-start');
+    document.body.classList.add('started');
+  });
+}
+
 // ---------- TAB NAVIGATION ----------
 const tabButtons = document.querySelectorAll('nav.tabs button');
 const views = document.querySelectorAll('section.view');

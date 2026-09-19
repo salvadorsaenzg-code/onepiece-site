@@ -78,7 +78,7 @@ function emblemIcon(type){
 function renderCharGroup(list, elId){
   const el = document.getElementById(elId);
   el.innerHTML = list.map(p=>`
-    <div class="char-card">
+    <div class="char-card" style="--card-accent:${p.color}; --card-tint:${p.color}1a">
       <div class="char-emblem" style="background:${p.color}22; color:${p.color}; border:2px solid ${p.color}">
         ${p.image
           ? `<img src="${p.image}" alt="Emblema de ${p.nombre}" class="char-emblem-img">`

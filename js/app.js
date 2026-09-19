@@ -79,8 +79,10 @@ function renderCharGroup(list, elId){
   const el = document.getElementById(elId);
   el.innerHTML = list.map(p=>`
     <div class="char-card">
-      <div class="char-emblem" style="background:${p.color}22; color:${p.color}">
-        <svg viewBox="0 0 48 48" width="40" height="40">${emblemIcon(p.icon)}</svg>
+      <div class="char-emblem" style="background:${p.color}22; color:${p.color}; border:2px solid ${p.color}">
+        ${p.image
+          ? `<img src="${p.image}" alt="Emblema de ${p.nombre}" class="char-emblem-img">`
+          : `<svg viewBox="0 0 48 48" width="40" height="40">${emblemIcon(p.icon)}</svg>`}
       </div>
       <span class="char-tag">${p.tag}</span>
       <h3>${p.nombre}</h3>

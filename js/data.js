@@ -132,6 +132,33 @@ const personajes = [
    color:'#b5342a', icon:'sword1'},
 ];
 
+const almirantes = [
+  {tag:'Almirante de Flota', nombre:'Sengoku "el Buda"', fruta:'Hito Hito no Mi, Modelo: Buda',
+   texto:'Lideró la Marina durante la era de oro de la piratería y tomó la decisión más polémica de la organización: ejecutar a Ace pese a la rendición de Barbablanca.',
+   dato:'Se retiró justo después de la Guerra de Marineford, dejando el cargo a Sakazuki.',
+   color:'#c9a227', icon:'radiance'},
+  {tag:'Almirante', nombre:'Kuzan "Aokiji"', fruta:'Hie Hie no Mi',
+   texto:'Su filosofía de "justicia perezosa" choca directamente con la de Akainu, y esa diferencia terminó definiendo el rumbo de la Marina tras la guerra.',
+   dato:'Perdió el puesto de Almirante de Flota frente a Sakazuki en un duelo que dejó una isla entera destruida.',
+   color:'#4fd3e0', icon:'ice'},
+  {tag:'Almirante de Flota', nombre:'Sakazuki "Akainu"', fruta:'Magu Magu no Mi',
+   texto:'Su "justicia absoluta" no distingue entre civiles y combatientes — la muerte de Ace a manos suyas es la escena que más define su forma de pensar.',
+   dato:'Su fruta es considerada superior en jerarquía elemental incluso frente al fuego normal, por ser lava.',
+   color:'#c0392b', icon:'flame'},
+  {tag:'Almirante', nombre:'Borsalino "Kizaru"', fruta:'Pika Pika no Mi',
+   texto:'Su actitud despreocupada contrasta con ser, en términos de velocidad pura, probablemente el usuario de Logia más rápido revelado hasta ahora.',
+   dato:'Se mueve literalmente a la velocidad de la luz al usar su fruta, ignorando casi cualquier intento de esquivarlo.',
+   color:'#e8c93a', icon:'beam'},
+  {tag:'Almirante', nombre:'Issho "Fujitora"', fruta:'Zushi Zushi no Mi',
+   texto:'Ciego por decisión propia tras un evento que lo hizo desconfiar de lo que ve, es de los pocos altos mandos que cuestiona abiertamente la corrupción del Gobierno Mundial.',
+   dato:'Puede alterar la gravedad a su alrededor, al punto de invocar meteoritos durante la Batalla de Dressrosa.',
+   color:'#8e5ec9', icon:'staff'},
+  {tag:'Almirante', nombre:'Aramaki "Ryokugyu"', fruta:'Grow Grow no Mi (Zusa Zusa no Mi)',
+   texto:'El más nuevo de los almirantes presentados, con una filosofía de desgaste: prefiere agotar a su enemigo antes que enfrentarlo de forma directa.',
+   dato:'Fue nombrado almirante después de la caída del sistema de los Shichibukai, en el reordenamiento de poder de la Marina.',
+   color:'#3d8f4c', icon:'leaf'},
+];
+
 const teorias = [
   {titulo:'Luffy es Joy Boy', prob:78,
    texto:'La Gear 5 se activó al "escuchar el tambor de la liberación" — el mismo lenguaje que se usa para describir al legendario Joy Boy. La conexión ya casi se siente confirmada más que teorizada.'},

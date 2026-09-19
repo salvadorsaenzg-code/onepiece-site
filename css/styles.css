@@ -230,8 +230,8 @@
     gap:1.4rem;
   }
   .char-card{
-    background: linear-gradient(180deg, rgba(236,226,200,0.04), rgba(236,226,200,0.015));
-    border:1px solid var(--line);
+    background: linear-gradient(180deg, var(--card-tint, rgba(236,226,200,0.04)), rgba(236,226,200,0.015));
+    border:1px solid var(--card-accent, var(--line));
     border-radius:2px;
     padding:1.4rem;
     position:relative;
@@ -239,7 +239,7 @@
   .char-card::before{
     content:"";
     position:absolute; top:0; left:0; width:100%; height:3px;
-    background:var(--gold);
+    background:var(--card-accent, var(--gold));
     opacity:.6;
   }
   .char-emblem{

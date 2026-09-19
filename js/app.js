@@ -58,14 +58,26 @@ function emblemIcon(type){
       return `<path d="M9 34 L12 15 L20 25 L24 12 L28 25 L36 15 L39 34 Z" ${s}/><path d="M9 34 H39" ${s}/>`;
     case 'sword1': // espada única, capitán yonko
       return `<path d="M24 6 V32" ${s}/><path d="M15 15 H33" ${s}/><path d="M20 32 H28 L26 40 H22 Z" ${s}/>`;
+    case 'ice': // cristal de hielo
+      return `<path d="M24 4 L34 20 L24 44 L14 20 Z" ${s}/><path d="M14 20 H34" ${s}/><path d="M24 4 V44" ${s}/>`;
+    case 'flame': // llama / lava
+      return `<path d="M24 5 C30 14 33 19 29 26 C34 24 36 30 31 36 C27 41 18 41 15 35 C12 29 15 24 18 26 C16 17 18 10 24 5 Z" ${s}/>`;
+    case 'beam': // ráfaga de luz
+      return `<circle cx="24" cy="24" r="4.5" ${s}/><path d="M24 24 L24 6 M24 24 L38 12 M24 24 L42 24 M24 24 L38 36 M24 24 L24 42 M24 24 L10 36 M24 24 L6 24 M24 24 L10 12" ${s}/>`;
+    case 'staff': // bastón con meteorito
+      return `<path d="M13 41 L35 9" ${s}/><circle cx="35" cy="9" r="4.5" ${s}/>`;
+    case 'leaf': // hoja / naturaleza
+      return `<path d="M24 6 C37 11 38 27 24 42 C10 27 11 11 24 6 Z" ${s}/><path d="M24 10 V38" ${s}/>`;
+    case 'radiance': // aura / resplandor tipo Buda
+      return `<circle cx="24" cy="24" r="7" ${s}/><path d="M24 4 V10 M24 38 V44 M4 24 H10 M38 24 H44 M9.5 9.5 L13.5 13.5 M34.5 34.5 L38.5 38.5 M9.5 38.5 L13.5 34.5 M34.5 13.5 L38.5 9.5" ${s}/>`;
     default:
       return `<circle cx="24" cy="24" r="14" ${s}/>`;
   }
 }
 
-function renderPersonajes(){
-  const el = document.getElementById('personajes-list');
-  el.innerHTML = personajes.map(p=>`
+function renderCharGroup(list, elId){
+  const el = document.getElementById(elId);
+  el.innerHTML = list.map(p=>`
     <div class="char-card">
       <div class="char-emblem" style="background:${p.color}22; color:${p.color}">
         <svg viewBox="0 0 48 48" width="40" height="40">${emblemIcon(p.icon)}</svg>
@@ -78,6 +90,22 @@ function renderPersonajes(){
     </div>
   `).join('');
 }
+function renderPersonajes(){
+  renderCharGroup(personajes, 'personajes-list');
+  renderCharGroup(almirantes, 'almirantes-list');
+}
+
+// Sub-pestañas dentro de Personajes (Mugiwaras / Almirantes)
+const personajesSubtabs = document.querySelectorAll('#personajes-subtabs button');
+personajesSubtabs.forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    personajesSubtabs.forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    const showMugiwaras = btn.dataset.group === 'mugiwaras';
+    document.getElementById('personajes-list').style.display = showMugiwaras ? 'grid' : 'none';
+    document.getElementById('almirantes-list').style.display = showMugiwaras ? 'none' : 'grid';
+  });
+});
 
 function renderTeorias(){
   const el = document.getElementById('teorias-list');

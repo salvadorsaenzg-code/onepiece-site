@@ -1,4 +1,4 @@
-  :root{
+:root{
     --ink:#0c2830;
     --deep:#071c22;
     --parchment:#bcdedb;
@@ -253,12 +253,12 @@
     width:100%; height:100%;
     object-fit:cover;
   }
-  .char-card h3{ font-size:1.2rem; }
+  .char-card h3{ font-size:1.2rem; color:var(--card-accent, var(--gold-bright)); }
   .char-tag{
     display:inline-block;
     font-size:.75rem;
     color:var(--deep);
-    background:var(--gold-bright);
+    background:var(--card-accent, var(--gold-bright));
     padding:.15rem .5rem;
     border-radius:2px;
     margin-bottom:.6rem;
@@ -269,7 +269,7 @@
   .char-fact{
     margin-top:.7rem;
     font-size:.85rem;
-    color:var(--gold);
+    color:var(--card-accent, var(--gold));
     font-style:italic;
   }
 

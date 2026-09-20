@@ -70,6 +70,16 @@ function emblemIcon(type){
       return `<path d="M24 6 C37 11 38 27 24 42 C10 27 11 11 24 6 Z" ${s}/><path d="M24 10 V38" ${s}/>`;
     case 'radiance': // aura / resplandor tipo Buda
       return `<circle cx="24" cy="24" r="7" ${s}/><path d="M24 4 V10 M24 38 V44 M4 24 H10 M38 24 H44 M9.5 9.5 L13.5 13.5 M34.5 34.5 L38.5 38.5 M9.5 38.5 L13.5 34.5 M34.5 13.5 L38.5 9.5" ${s}/>`;
+    case 'star': // estrella
+      return `<path d="M24 4 L29 18 L44 18 L32 27 L37 42 L24 33 L11 42 L16 27 L4 18 L19 18 Z" ${s}/>`;
+    case 'music': // nota musical
+      return `<circle cx="16" cy="34" r="5" ${s}/><path d="M21 34 V10 L34 6 V30" ${s}/><circle cx="29" cy="30" r="5" ${s}/>`;
+    case 'sling': // tirachinas
+      return `<path d="M14 42 L24 24 L34 42" ${s}/><path d="M18 12 C18 20 24 24 24 24 C24 24 30 20 30 12" ${s}/><circle cx="24" cy="30" r="3" ${s}/>`;
+    case 'anchor': // ancla
+      return `<circle cx="24" cy="10" r="4" ${s}/><path d="M24 14 V38" ${s}/><path d="M12 26 C12 34 17 40 24 40 C31 40 36 34 36 26" ${s}/><path d="M16 26 H32" ${s}/>`;
+    case 'tie': // corbata
+      return `<path d="M24 6 L28 14 L24 20 L20 14 Z" ${s}/><path d="M20 20 H28 L25 40 H23 Z" ${s}/>`;
     default:
       return `<circle cx="24" cy="24" r="14" ${s}/>`;
   }

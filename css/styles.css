@@ -14,21 +14,21 @@
   body{
     margin:0;
     background:
-      linear-gradient(180deg, rgba(7,28,34,0.88), rgba(7,28,34,0.94) 40%, var(--deep) 85%),
+      linear-gradient(180deg, rgba(7,28,34,0.6), rgba(7,28,34,0.72) 40%, rgba(7,28,34,0.85) 85%),
       url('../images/ocean-bg.jpg') center 20%/cover no-repeat fixed;
     color:var(--parchment);
-    font-family:'Inter',sans-serif;
+    font-family:'Nunito Sans',sans-serif;
     font-size:16px;
     line-height:1.55;
   }
   h1,h2,h3,h4{
-    font-family:'Spectral',serif;
+    font-family:'Pirata One',serif;
     font-weight:600;
     margin:0 0 .4em 0;
     color:var(--gold-bright);
   }
   .display{
-    font-family:'Spectral SC',serif;
+    font-family:'Pirata One',serif;
     letter-spacing:.03em;
   }
   a{color:var(--gold-bright);}
@@ -72,7 +72,7 @@
     background:var(--gold);
     color:var(--deep);
     border:none;
-    font-family:'Spectral',serif;
+    font-family:'Pirata One',serif;
     font-weight:700;
     font-size:1rem;
     letter-spacing:.05em;
@@ -108,7 +108,7 @@
   .eyebrow-log{
     font-size:.85rem;
     color:var(--gold);
-    font-family:'Spectral',serif;
+    font-family:'Pirata One',serif;
     font-style:italic;
     margin-bottom:1rem;
     max-width:60ch;
@@ -140,7 +140,7 @@
     flex:0 0 auto;
     background:none; border:none;
     color:var(--parchment-dim);
-    font-family:'Spectral',serif;
+    font-family:'Pirata One',serif;
     font-size:.95rem;
     padding:1rem 1.4rem;
     cursor:pointer;
@@ -180,13 +180,13 @@
     border-bottom:1px solid var(--line);
   }
   .arc-num{
-    font-family:'Spectral',serif;
+    font-family:'Pirata One',serif;
     font-size:1.6rem;
     color:var(--gold);
     opacity:.7;
   }
   .arc-entry h3{ font-size:1.25rem; margin-bottom:.4rem; }
-  .arc-saga{ font-size:.82rem; color:var(--teal); font-family:'Inter',sans-serif; }
+  .arc-saga{ font-size:.82rem; color:var(--teal); font-family:'Nunito Sans',sans-serif; }
   .arc-body{ color:var(--parchment-dim); margin-top:.6rem; font-size:.96rem; }
   .arc-chars{ display:flex; flex-wrap:wrap; gap:.4rem; }
   .char-chip{
@@ -197,7 +197,7 @@
     border:1px solid var(--line);
     padding:.15rem .55rem;
     border-radius:20px;
-    font-family:'Inter',sans-serif;
+    font-family:'Nunito Sans',sans-serif;
   }
 
   /* PERSONAJES - cards */
@@ -210,7 +210,7 @@
     background:none;
     border:1px solid var(--line);
     color:var(--parchment-dim);
-    font-family:'Inter',sans-serif;
+    font-family:'Nunito Sans',sans-serif;
     font-size:.85rem;
     font-weight:600;
     padding:.5rem 1.1rem;
@@ -262,7 +262,7 @@
     padding:.15rem .5rem;
     border-radius:2px;
     margin-bottom:.6rem;
-    font-family:'Inter',sans-serif;
+    font-family:'Nunito Sans',sans-serif;
     font-weight:600;
   }
   .char-card p{ color:var(--parchment-dim); font-size:.92rem; }
@@ -301,7 +301,7 @@
     margin-bottom:1.6rem;
   }
   .duel-title{
-    font-family:'Spectral',serif;
+    font-family:'Pirata One',serif;
     font-size:1.3rem;
     margin-bottom:.9rem;
     color:var(--parchment);
@@ -314,7 +314,7 @@
   .duel-bar .right{ background:var(--teal); }
   .duel-bar div{
     display:flex; align-items:center;
-    font-family:'Spectral',serif; font-weight:700; font-size:.95rem;
+    font-family:'Pirata One',serif; font-weight:700; font-size:.95rem;
     color:var(--deep);
     padding:0 .8rem;
   }
@@ -341,7 +341,7 @@
   .poll-row .name{ color:var(--parchment); }
   .poll-row .track{ height:16px; background:rgba(236,226,200,0.08); position:relative; border-radius:2px; overflow:hidden; }
   .poll-row .fill{ position:absolute; left:0; top:0; bottom:0; background:var(--gold); }
-  .poll-row .pct{ text-align:right; color:var(--gold-bright); font-family:'Spectral',serif; }
+  .poll-row .pct{ text-align:right; color:var(--gold-bright); font-family:'Pirata One',serif; }
   .poll-note{
     font-size:.82rem; color:var(--parchment-dim); font-style:italic; margin-top:.6rem;
   }
